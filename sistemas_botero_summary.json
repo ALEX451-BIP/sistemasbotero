@@ -1,0 +1,72 @@
+{
+  "site_name": "SISTEMAS BOTERO",
+  "summary": "Sistema de gestión para kioscos, almacenes y comercios de San Juan, Argentina.",
+  "url": "https://alex451-bip.github.io/sistemasbotero/",
+  "products": [
+    {
+      "slug": "kiosco",
+      "name": "Kiosco y almacén",
+      "file": "kiosco.html"
+    },
+    {
+      "slug": "veterinaria",
+      "name": "Veterinaria",
+      "file": "veterinaria.html"
+    },
+    {
+      "slug": "corralon",
+      "name": "Corralón",
+      "file": "corralon.html"
+    },
+    {
+      "slug": "ferreteria",
+      "name": "Ferretería",
+      "file": "ferreteria.html"
+    },
+    {
+      "slug": "panaderia",
+      "name": "Panadería",
+      "file": "panaderia.html"
+    },
+    {
+      "slug": "carniceria",
+      "name": "Carnicería",
+      "file": "carniceria.html"
+    },
+    {
+      "slug": "farmacia",
+      "name": "Farmacia",
+      "file": "farmacia.html"
+    },
+    {
+      "slug": "barberia",
+      "name": "Barbería",
+      "file": "barberia.html"
+    },
+    {
+      "slug": "heladeria",
+      "name": "Heladería",
+      "file": "heladeria.html"
+    },
+    {
+      "slug": "libreria",
+      "name": "Librería",
+      "file": "libreria.html"
+    },
+    {
+      "slug": "verduleria",
+      "name": "Verdulería",
+      "file": "verduleria.html"
+    },
+    {
+      "slug": "indumentaria",
+      "name": "Indumentaria",
+      "file": "indumentaria.html"
+    },
+    {
+      "slug": "estetica",
+      "name": "Estética",
+      "file": "estetica.html"
+    }
+  ]
+}

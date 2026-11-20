@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Estética San Juan | Sistema de gestión y pedidos | Sistemas Botero</title>
+<meta name="description" content="Agenda de turnos, catálogo de servicios, insumos y ventas. Plan para Estética en San Juan: catálogo, stock, caja y pedidos por WhatsApp.">
+<style>
+:root{--a:#c026d3;--a2:#db2777;--soft:#db27771f;--ink:#0f172a;--mut:#64748b;--line:#e2e8f0}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);
+     background:#f8fafc;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 18px}
+header{position:sticky;top:0;z-index:9;background:#ffffffef;backdrop-filter:blur(10px);
+       border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:14px;height:60px}
+.brand{font-weight:800;letter-spacing:.4px;color:var(--a2);text-decoration:none;font-size:14px}
+.hd .sp{flex:1}
+.btn{display:inline-flex;align-items:center;gap:7px;border-radius:11px;padding:10px 15px;
+     text-decoration:none;font-weight:700;font-size:14px;border:1px solid transparent;cursor:pointer}
+.btn.g{background:var(--a);color:#fff}
+.btn.o{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn:hover{filter:brightness(1.06)}
+.hero{padding:34px 0 8px}
+.heroBox{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 18px 44px -18px #0f172a55}
+.heroArt{display:block;width:100%;height:auto;animation:kb-shimmer 6s ease-in-out infinite alternate}
+.heroTxt{position:absolute;left:0;right:0;bottom:0;padding:22px 26px;color:#fff;
+        background:linear-gradient(transparent,#0b1220dd)}
+.heroTxt h1{margin:0 0 6px;font-size:clamp(24px,4.4vw,40px);line-height:1.1}
+.heroTxt p{margin:0;opacity:.94;max-width:62ch;font-size:15px}
+.artNota{font-size:12px;color:var(--mut);margin:9px 2px 0}
+.cta{display:flex;gap:11px;flex-wrap:wrap;margin:20px 0 6px}
+h2{font-size:clamp(19px,2.6vw,25px);margin:40px 0 6px;letter-spacing:-.4px}
+.sub{color:var(--mut);margin:0 0 16px;font-size:15px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px}
+.fcard{background:#fff;border:1px solid var(--line);border-radius:15px;padding:17px 18px;
+       border-left:4px solid var(--a)}
+.fcard.av{border-left-color:#e11d48}
+.fcard h3{margin:0 0 7px;font-size:15.5px}
+.fcard p{margin:0;color:#475569;font-size:14.5px}
+.tips{list-style:none;padding:0;margin:0;display:grid;gap:11px;
+      grid-template-columns:repeat(auto-fit,minmax(255px,1fr))}
+.tips li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px 17px;font-size:14.5px}
+.tips span{color:#475569}
+table{width:100%;border-collapse:collapse;background:#fff;border:1px solid var(--line);
+      border-radius:14px;overflow:hidden}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);font-size:14.5px}
+th{background:var(--a2);color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:.5px}
+td.p{text-align:right;font-weight:700;white-space:nowrap}
+td.n{width:34px}
+tr:last-child td{border-bottom:none}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.plans .p{background:#fff;border:1px solid var(--line);border-radius:16px;padding:19px}
+.plans .p.hi{border-color:var(--a);box-shadow:0 0 0 3px var(--soft)}
+.nm{font-weight:800;font-size:13px;letter-spacing:1.4px;color:var(--a2)}
+.pr{font-size:29px;font-weight:800;margin:7px 0 11px;letter-spacing:-1px}
+.pr span{font-size:13px;font-weight:600;color:var(--mut);letter-spacing:0}
+.plans ul{margin:0;padding-left:18px;color:#475569;font-size:14.5px}
+.plans li{margin:5px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 0}
+.chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;
+      text-decoration:none;color:var(--ink);font-size:14px;font-weight:600}
+.chip:hover{border-color:var(--a);color:var(--a)}
+footer{margin:52px 0 34px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13.5px}
+footer b{color:#475569}
+@media(max-width:640px){.heroTxt{position:static;background:var(--a2);padding:18px}
+  .heroBox{border-radius:16px}}
+/* --- animacion unica de Estética --- */
+@keyframes kb-shimmer{from{translateX(-40px)}to{translateX(40px)}}
+@media (prefers-reduced-motion:reduce){.heroArt{animation:none !important}}
+@media print{
+  header,.cta,.chips,.artNota{display:none !important}
+  body{background:#fff}.heroBox{box-shadow:none}
+  .fcard,table,.plans .p{break-inside:avoid;border:1px solid #cbd5e1}
+  footer{margin-top:20px}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap hd">
+  <a class="brand" href="../">SISTEMAS BOTERO</a>
+  <span class="sp"></span>
+  <a class="btn o" href="../">Todos los rubros</a>
+  <button class="btn o" onclick="window.print()">Imprimir</button>
+</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="heroBox">
+      <img class="heroArt" src="img/estetica.jpg" width="900" height="600"
+           alt="Arte de marca del rubro Estética" loading="eager" decoding="async">
+      <div class="heroTxt"><h1>Estética</h1><p>Agenda de turnos, catálogo de servicios, insumos y ventas.</p></div>
+    </div>
+    <p class="artNota">La imagen es arte del rubro, no una foto del local.</p>
+    <div class="cta">
+      <a class="btn g" href="https://alex451-bip.github.io/sistema-estetica/" target="_blank" rel="noopener">Abrir el sistema</a>
+      <a class="btn o" href="https://wa.me/5492645252045?text=%%20Hola%%20Alex,%%20vi%%20la%%20pagina%%20de%%20estetica%20y%%20quiero%%20mas%%20info." target="_blank" rel="noopener">Escribime por WhatsApp</a>
+    </div>
+  </section>
+
+  <h2>Que hace</h2>
+  <p class="sub">Estas son las pestañas que tiene el sistema, sin agregar nada que no exista.</p>
+  <div class="grid"><article class="fcard"><h3>Catalogo</h3><p>Carga inicial de 12 artículos en 7 categorías. Stock por artículo y aviso cuando queda en el minimo.</p></article><article class="fcard"><h3>Turnos</h3><p>Segunda pestana del sistema: Agenda de Turnos.</p></article></div>
+
+  <h2>Avisos que te hace solo</h2>
+  <p class="sub">Lo que el sistema marca solo, con la regla exacta.</p>
+  <div class="grid"><article class="fcard av"><h3>Sin avisos automaticos</h3><p>Este modulo no trae alertas configuradas.</p></article></div>
+
+  <h2>Ejemplos con los datos que trae</h2>
+  <p class="sub">Estos son los artículos del catálogo de ejemplo del sistema Estética.</p>
+  <table><thead><tr><th></th><th>Artículo</th><th style="text-align:right">Precio</th></tr></thead>
+  <tbody><tr><td class="n">✨</td><td>Depilacion a cera</td><td class="p">$7.000</td></tr><tr><td class="n">✨</td><td>Depilacion laser axilas</td><td class="p">$22.000</td></tr><tr><td class="n">💅</td><td>Manicure semipermanente</td><td class="p">$12.000</td></tr><tr><td class="n">💅</td><td>Pedicure spa</td><td class="p">$15.000</td></tr><tr><td class="n">💄</td><td>Disenho de unas</td><td class="p">$9.000</td></tr><tr><td class="n">🧗</td><td>Limpieza facial profunda</td><td class="p">$16.000</td></tr></tbody></table>
+
+  <h2>Consejos del rubro</h2>
+  <ul class="tips"><li><b>Consejo</b><br><span>Cobra la seña cuando reservan: si la clienta no paga la seña, el turno que no viene es plata que ya perdiste.</span></li><li><b>Consejo</b><br><span>Los paquetes (6 depilaciones, 10 manicures) son los que hacen que la clienta vuelva sola. Cargalos como productos y cobralos aparte.</span></li><li><b>Consejo</b><br><span>Quien reserva y no viene es el gasto real. Mismo horario, misma semana, misma persona: eso ya no es turno, es una cuenta a las 9.</span></li></ul>
+
+  <h2>Planes</h2>
+  <p class="sub">Un solo pago. El precio va aqui porque esta pagina es la presentacion comercial, no un post de redes.</p>
+  <div class="plans"><div class="p"><div class="nm">BÁSICO</div><div class="pr">$25.000<span> total</span></div><ul><li>Tu rubro y tus colores</li><li>Catálogo + pedidos por WhatsApp</li><li>Asistente que responde solo</li><li>1 mes de actualizaciones</li></ul></div><div class="p hi"><div class="nm">PROFESIONAL</div><div class="pr">$50.000<span> total</span></div><ul><li>Todo lo del básico</li><li>Caja y control de ventas</li><li>Clientes y fiado</li><li>Promos y personalización</li><li>Soporte por WhatsApp</li></ul></div><div class="p"><div class="nm">PREMIUM</div><div class="pr">$120.000<span> total</span></div><ul><li>Todo lo del profesional</li><li>Alertas de stock bajo</li><li>Integración con tu WhatsApp</li><li>Soporte prioritario 90 días</li></ul></div></div>
+
+  <h2>Otros rubros</h2>
+  <div class="chips"><a class="chip" href="kiosco.html">Kiosco y almacén</a><a class="chip" href="veterinaria.html">Veterinaria</a><a class="chip" href="corralon.html">Corralón</a><a class="chip" href="ferreteria.html">Ferretería</a><a class="chip" href="panaderia.html">Panadería</a><a class="chip" href="carniceria.html">Carnicería</a><a class="chip" href="farmacia.html">Farmacia</a><a class="chip" href="barberia.html">Barbería</a><a class="chip" href="heladeria.html">Heladería</a><a class="chip" href="libreria.html">Librería</a><a class="chip" href="verduleria.html">Verdulería</a><a class="chip" href="indumentaria.html">Indumentaria</a></div>
+
+  <footer>
+    <p><b>Como funciona:</b> el sistema anda en el navegador, en el celular o la compu del negocio.
+    Los datos quedan guardados en ese navegador (localStorage). Si borras los datos del navegador
+    o cambias de dispositivo, se pierden: <b>no hay nube todavia</b>.</p>
+    <p>Los resultados varyan segun como lo uses. Precios de ejemplo, no son los precios de tu rubro.</p>
+    <p>Sistemas Botero · San Juan · <a href="../">volver a todos los rubros</a></p>
+  </footer>
+</main>
+</body>
+</html>
